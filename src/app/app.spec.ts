@@ -19,6 +19,17 @@ describe('App', () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Services');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Tech accessories');
+  });
+
+  it('should load the seeded products when requested', async () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+    const button = fixture.nativeElement.querySelector('button') as HTMLButtonElement;
+
+    button.click();
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelectorAll('.product-card')).toHaveLength(9);
   });
 });

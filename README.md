@@ -1,59 +1,42 @@
 # Services
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
+A small Angular application demonstrating how an injectable service can provide in-memory product data to a responsive tech accessories catalog. Product data is loaded when you select **Load products**.
+
+## Requirements
+
+- Node.js and npm
 
 ## Development server
 
-To start a local development server, run:
+Install dependencies and start the local development server:
 
 ```bash
-ng serve
+npm install
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open `http://localhost:4200/`. The app automatically reloads when source files change.
 
-## Code scaffolding
+## Product data
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+The `ProductService` in `src/app/services/product-service.ts` returns products with an ID, name, and price. Edit its seeded array to update the catalog. Prices are displayed in Indian rupees.
+
+## Build
 
 ```bash
-ng generate component component-name
+npm run build
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Build output is written to `dist/`.
+
+## Unit tests
 
 ```bash
-ng generate --help
+npm test
 ```
 
-## Building
+Tests use Vitest through the Angular CLI.
 
-To build the project run:
+## Further reading
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+For Angular CLI commands and features, see the [Angular CLI documentation](https://angular.dev/tools/cli).
